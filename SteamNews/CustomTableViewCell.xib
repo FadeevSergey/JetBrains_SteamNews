@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="SteamNews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjn-Lq-WDr">
+                        <rect key="frame" x="5" y="5" width="310" height="40"/>
+                        <color key="backgroundColor" red="0.82356506490000003" green="0.90064758570000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="sk6-Ad-kOK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sor-tW-d8N">
+                        <rect key="frame" x="5" y="50" width="310" height="40"/>
+                        <color key="backgroundColor" red="0.82356506490000003" green="0.90064758570000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="BEF-Jg-FHn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HZ-Rn-iOa">
+                        <rect key="frame" x="5" y="95" width="40" height="40"/>
+                        <color key="backgroundColor" red="0.82356506490000003" green="0.90064758570000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="fBh-Hs-NLL"/>
+                            <constraint firstAttribute="height" constant="40" id="mEw-Fg-JrS"/>
+                        </constraints>
+                        <state key="normal" image="safari.fill" catalog="system">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="openURL:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Osa-Jj-CMH"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03d-qX-Ghu">
+                        <rect key="frame" x="50" y="95" width="265" height="40"/>
+                        <color key="backgroundColor" red="0.82356506490000003" green="0.90064758570000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="YdP-4l-vXA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="03d-qX-Ghu" firstAttribute="top" secondItem="Sor-tW-d8N" secondAttribute="bottom" constant="5" id="D0r-r7-Ikv"/>
+                    <constraint firstItem="jjn-Lq-WDr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="FjJ-kr-EfF"/>
+                    <constraint firstItem="Sor-tW-d8N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Fpb-kl-cnZ"/>
+                    <constraint firstAttribute="bottom" secondItem="03d-qX-Ghu" secondAttribute="bottom" constant="5" id="L4c-7A-HT3"/>
+                    <constraint firstItem="03d-qX-Ghu" firstAttribute="leading" secondItem="2HZ-Rn-iOa" secondAttribute="trailing" constant="5" id="LeQ-zM-uBO"/>
+                    <constraint firstAttribute="trailing" secondItem="Sor-tW-d8N" secondAttribute="trailing" constant="5" id="SfA-mY-qqU"/>
+                    <constraint firstAttribute="trailing" secondItem="jjn-Lq-WDr" secondAttribute="trailing" constant="5" id="WFQ-Ji-Dpt"/>
+                    <constraint firstAttribute="bottom" secondItem="2HZ-Rn-iOa" secondAttribute="bottom" constant="5" id="agm-FP-mtA"/>
+                    <constraint firstItem="Sor-tW-d8N" firstAttribute="top" secondItem="jjn-Lq-WDr" secondAttribute="bottom" constant="5" id="p88-EU-N9x"/>
+                    <constraint firstItem="jjn-Lq-WDr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="rsO-zJ-Dca"/>
+                    <constraint firstItem="2HZ-Rn-iOa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="tsD-RB-Md1"/>
+                    <constraint firstItem="03d-qX-Ghu" firstAttribute="leading" secondItem="2HZ-Rn-iOa" secondAttribute="trailing" constant="5" id="u9W-wl-A8o"/>
+                    <constraint firstItem="2HZ-Rn-iOa" firstAttribute="top" secondItem="Sor-tW-d8N" secondAttribute="bottom" constant="5" id="uM5-XS-A5Z"/>
+                    <constraint firstAttribute="trailing" secondItem="03d-qX-Ghu" secondAttribute="trailing" constant="5" id="v51-c3-bX9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="openURL" destination="2HZ-Rn-iOa" id="d0Y-uV-Z2T"/>
+                <outlet property="previewTextLable" destination="Sor-tW-d8N" id="OTz-Db-V0s"/>
+                <outlet property="titleTextLable" destination="jjn-Lq-WDr" id="nry-sl-mMx"/>
+                <outlet property="urlTextLable" destination="03d-qX-Ghu" id="NYz-7J-vvG"/>
+            </connections>
+            <point key="canvasLocation" x="-54" y="13"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="safari.fill" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
