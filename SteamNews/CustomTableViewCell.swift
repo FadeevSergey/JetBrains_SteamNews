@@ -11,24 +11,34 @@ import UIKit
 class CustomTableViewCell: UITableViewCell {    
     @IBOutlet weak var titleTextLable: UILabel!
     @IBOutlet weak var previewTextLable: UILabel!
-    @IBOutlet weak var urlTextLable: UILabel!
     @IBOutlet weak var openURL: UIButton!
     
-
+    var urlNews: String?
     func initFields(title: String, preview: String, url: String) {
+        urlNews = url
+        
         titleTextLable.text = title
         previewTextLable.text = preview
-        urlTextLable.text = url
+        
+        titleTextLable.layer.masksToBounds = true
+        previewTextLable.layer.masksToBounds = true
+        
+        titleTextLable.layer.cornerRadius = 5
+        previewTextLable.layer.cornerRadius = 5
+       
+        openURL.layer.masksToBounds = true
+        openURL.layer.cornerRadius = 5
     }
     
     @IBAction func openURL(_ sender: Any) {
-        if let url = urlTextLable.text {
+        if let url = urlNews {
             UIApplication.shared.open(URL(string: url)!)
         }
     }
 }
 
 extension ViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch tableView {
         case self.tableView:

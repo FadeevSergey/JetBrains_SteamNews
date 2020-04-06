@@ -28,9 +28,7 @@ class ViewController: UIViewController {
         self.navigationItem.title = "Steam apps News:"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.view.addSubview(self.tableView!)
-    
-        self.view.backgroundColor = #colorLiteral(red: 0.7321722388, green: 0.9139052496, blue: 1, alpha: 1)
-        
+            
         self.tableView?.dataSource = self
         self.tableView?.delegate = self as? UITableViewDelegate
 
@@ -55,7 +53,8 @@ class ViewController: UIViewController {
     }
     
     @objc func getUpdateNews() {
-        updateNews!.setTitleColor(UIColor.black, for: .normal)
+        updateNews!.setTitleColor(UIColor.red, for: .normal)
+        
         arrayOfNews.removeAll()
         getSortedNews(appID)
         self.tableView?.reloadData()

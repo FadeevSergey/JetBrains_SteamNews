@@ -37,13 +37,17 @@ struct GameNews: Codable {
 }
 
 func getSortedNews(_ appID: [Int]) {
+    let queue = DispatchQueue.global(qos: .userInitiated)
+    
+    queue.sync {
     let decoder = JSONDecoder()
     for id in appID {
-        if let url = URL(string: "http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=\(id)&count=\(countOfNews)&maxlength=\(maxLenghtOfNews)&format=\(format)") {
-            let data: Data? = try? Data(contentsOf: url)
-            if let data = data {
-                let news = try! decoder.decode(GameNews.self, from: data)
-                arrayOfNews += news.appnews.newsitems
+            if let url = URL(string: "http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=\(id)&count=\(countOfNews)&maxlength=\(maxLenghtOfNews)&format=\(format)") {
+                let data: Data? = try? Data(contentsOf: url)
+                if let data = data {
+                    let news = try! decoder.decode(GameNews.self, from: data)
+                    arrayOfNews += news.appnews.newsitems
+                }
             }
         }
     }
